@@ -23,9 +23,10 @@
 
             environment.systemPackages = [
               claude-code.packages.${system}.default
-              pkgs.ghc
+              pkgs.haskell.compiler.ghc912
               pkgs.cabal-install
               pkgs.git
+              pkgs.vim
             ];
 
             users.users.dev = {
