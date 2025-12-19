@@ -44,8 +44,8 @@
               graphics = false;
               diskSize = 32768; # 32 GB disk size in MB
               sharedDirectories.workspace = {
-                source = "$HOME/Tmp/claude-code-nixos-vm/workspace";
-                target = "/workspace";
+                source = "/home/jhrcek/Devel/github.com/jhrcek/claude-code-nixos-vm/workspace";
+                target = "/home/dev/workspace";
               };
             };
 
