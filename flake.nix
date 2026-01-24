@@ -26,6 +26,7 @@
               pkgs.haskell.compiler.ghc912
               pkgs.cabal-install
               pkgs.elmPackages.elm
+              pkgs.elmPackages.elm-test
               pkgs.git
               pkgs.gnumake
               pkgs.vim
