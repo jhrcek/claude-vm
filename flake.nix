@@ -36,6 +36,11 @@
               initialPassword = "dev";
             };
 
+            # Start in ~/workspace by default on login
+            environment.etc."profile.local".text = ''
+              cd ~/workspace 2>/dev/null || true
+            '';
+
             services.getty.autologinUser = "dev";
 
             virtualisation.vmVariant.virtualisation = {
