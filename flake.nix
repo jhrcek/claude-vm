@@ -27,6 +27,7 @@
               pkgs.cabal-install
               pkgs.elmPackages.elm
               pkgs.git
+              pkgs.gnumake
               pkgs.vim
             ];
 
