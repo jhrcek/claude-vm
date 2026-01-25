@@ -21,6 +21,8 @@
           {
             system.stateVersion = "25.11";
 
+            time.timeZone = "Europe/Prague";
+
             environment.systemPackages = [
               claude-code.packages.${system}.default
               pkgs.haskell.compiler.ghc912
