@@ -55,7 +55,7 @@
               graphics = false;
               diskSize = 32768; # 32 GB disk size in MB
               sharedDirectories.workspace = {
-                source = "/home/jhrcek/Devel/github.com/jhrcek/claude-code-nixos-vm/workspace";
+                source = "/home/jhrcek/Devel/github.com/jhrcek/quickies/permutation-explorer";
                 target = "/home/dev/workspace";
               };
             };
@@ -70,6 +70,6 @@
 
       packages.${system}.default = self.nixosConfigurations.vm.config.system.build.vm;
 
-      formatter.${system} = pkgs.nixfmt-rfc-style;
+      formatter.${system} = pkgs.nixfmt;
     };
 }
