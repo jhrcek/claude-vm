@@ -25,12 +25,14 @@
 
             environment.systemPackages = [
               claude-code.packages.${system}.default
-              pkgs.haskell.compiler.ghc912
-              pkgs.cabal-install
+              # pkgs.haskell.compiler.ghc912
+              # pkgs.cabal-install
               pkgs.elmPackages.elm
               pkgs.elmPackages.elm-test
               pkgs.git
               pkgs.gnumake
+              pkgs.jq
+              pkgs.jless
               pkgs.vim
             ];
 
