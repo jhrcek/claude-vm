@@ -21,6 +21,8 @@
           {
             system.stateVersion = "25.11";
 
+            networking.hostName = "vm";
+
             time.timeZone = "Europe/Prague";
 
             environment.systemPackages = [
