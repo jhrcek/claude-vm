@@ -46,6 +46,12 @@
               initialPassword = "dev";
             };
 
+            # Make C libraries discoverable by cabal/GHC
+            environment.variables = {
+              LIBRARY_PATH = "${pkgs.zlib}/lib";
+              C_INCLUDE_PATH = "${pkgs.zlib.dev}/include";
+            };
+
             # Start in ~/workspace by default on login
             environment.etc."profile.local".text = ''
               cd ~/workspace 2>/dev/null || true
