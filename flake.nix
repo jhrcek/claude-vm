@@ -25,8 +25,8 @@
 
             environment.systemPackages = [
               claude-code.packages.${system}.default
-              # pkgs.haskell.compiler.ghc912
-              # pkgs.cabal-install
+              pkgs.haskell.compiler.ghc912
+              pkgs.cabal-install
               pkgs.elmPackages.elm
               pkgs.elmPackages.elm-test
               pkgs.git
@@ -55,7 +55,7 @@
               graphics = false;
               diskSize = 32768; # 32 GB disk size in MB
               sharedDirectories.workspace = {
-                source = "/home/jhrcek/Devel/github.com/jhrcek/quickies/permutation-explorer";
+                source = ''"$WORKSPACE_DIR"'';
                 target = "/home/dev/workspace";
               };
             };
@@ -68,7 +68,14 @@
         ];
       };
 
-      packages.${system}.default = self.nixosConfigurations.vm.config.system.build.vm;
+      packages.${system}.default =
+        let
+          vmBuild = self.nixosConfigurations.vm.config.system.build.vm;
+        in
+        pkgs.writeShellScriptBin "claude-vm" ''
+          export WORKSPACE_DIR="$(pwd)"
+          exec ${vmBuild}/bin/run-vm-vm
+        '';
 
       formatter.${system} = pkgs.nixfmt;
     };
