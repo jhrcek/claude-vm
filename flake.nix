@@ -36,6 +36,7 @@
               pkgs.jq
               pkgs.jless
               pkgs.vim
+              pkgs.zlib
             ];
 
             users.users.dev = {
