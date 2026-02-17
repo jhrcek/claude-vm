@@ -35,6 +35,7 @@
               pkgs.gnumake
               pkgs.jq
               pkgs.jless
+              pkgs.pkg-config
               pkgs.vim
               pkgs.zlib
             ];
