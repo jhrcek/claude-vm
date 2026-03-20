@@ -36,6 +36,7 @@
               pkgs.jq
               pkgs.jless
               pkgs.pkg-config
+              pkgs.sqlite
               pkgs.vim
               pkgs.zlib
             ];
